@@ -15,7 +15,9 @@ Kint debugger is integrated with Debugbar can also work standalone or in CLI.
 **Attention !**
 
 *This plugin allows you to debug made plugins/themes*
+
 1. do not forget to remove the function d, dd, ddd, s, sd, dump_wp_query, dump_wp, dump_post after completing your development, **it can break your code**
+
 2. can not be edited, and do not insert their own plugins/themes using this functions, **it can break your code**
 
 *This plugin only requires to debug*
