@@ -1,0 +1,43 @@
+{
+
+  "name": "petrozaodsky/kint-php-debugger",
+  "description": "Kint Debugger Master plugin for WordPress",
+  "type": "project",
+  "keywords": [
+    "wordpress",
+    "wp",
+    "kint",
+    "php",
+    "debug",
+    "devel",
+    "dsm"
+  ],
+  "homepage": "https://alkoweb.com/",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "petrozavodsky",
+      "email": "petrozavodsky@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "raveren/kint": "1.0.10"
+  },
+  "autoload": {
+    "classmap": [ ],
+    "files": [ ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "minimum-stability": "dev"
+
+}
