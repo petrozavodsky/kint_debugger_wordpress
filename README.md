@@ -1,5 +1,5 @@
-# Plugin Name
-Contributors: (this should be a list of wordpress.org userid's)
+# Kint Debugger Fork
+Contributors:
 Donate link: https://alkoweb.ru
 Tags: Kint, Kint debugger, WordPress debugger, Debugbar Add-On, Debugbar debugger, Debugbar Kint debugger,  Krimo kint
 Requires at least: 3.0.1
