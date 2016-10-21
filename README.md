@@ -52,9 +52,9 @@ When you are testing your code, you use d( $var ) in place of var_dump( $var ) a
 
 ### What else does Kint provide to help me debug?
 
-- As you can see the [screenshot 1](http://wordpress.org/extend/plugins/kint_debugger_master/screenshots/), besides the handy UI, it also provides you with a full call stack.  Click on the text below the UI to expand it out.
+As you can see the [screenshot 1](http://wordpress.org/extend/plugins/kint_debugger_master/screenshots/), besides the handy UI, it also provides you with a full call stack.  Click on the text below the UI to expand it out.
 
-= I have called the debug functions, but I can't find the output! =
+###I have called the debug functions, but I can't find the output!###
 * If you have the Debug Bar plugin installed, all of your debug results will be displayed under the "Kint Debugger" sub panel.
 
 - If you have a feature request or question, please use the [Kint Debugger support forum](http://wordpress.org/tags/kint-debugger).
@@ -82,3 +82,4 @@ and post your question in the comments
 ### 1.0
 
 Add common functionality
+
