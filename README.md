@@ -1,4 +1,4 @@
-# Kint Debugger Fork
+# Kint Debugger Master
 Contributors:
 Donate link: https://alkoweb.ru
 Tags: Kint, Kint debugger, WordPress debugger, Debugbar Add-On, Debugbar debugger, Debugbar Kint debugger,  Krimo kint
