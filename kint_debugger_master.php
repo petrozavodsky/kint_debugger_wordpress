@@ -39,4 +39,4 @@ function init_kint_debugger_master()
     new Kint_debugger_master(__FILE__);
 }
 
-add_action("plugins_loaded", "init_kint_debugger_master");
+add_action("plugins_loaded", "init_kint_debugger_master",0);
