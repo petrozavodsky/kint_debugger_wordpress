@@ -11,6 +11,7 @@
  * Plugin URI:        https://alkoweb.ru/kint_debugger_master
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
+ * Requires PHP: 5.3
  * Author:            petrozavodsky
  * Author URI:        https://alkoweb.ru
  * License:           GPL-2.0+
