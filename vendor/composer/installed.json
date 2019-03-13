@@ -50,6 +50,7 @@
             "debug",
             "kint",
             "php"
-        ]
+        ],
+        "abandoned": "kint-php/kint"
     }
 ]

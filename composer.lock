@@ -1,11 +1,12 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31831515cec51e597355cf2b3e3da770",
-    "packages": [
+    "content-hash": "d325e98766bcb02e790fe17b05fc82b1",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "raveren/kint",
             "version": "1.0.10",
@@ -55,10 +56,10 @@
                 "kint",
                 "php"
             ],
+            "abandoned": "kint-php/kint",
             "time": "2015-09-16T14:09:00+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": [],
