@@ -1,34 +1,50 @@
 [
     {
-        "name": "raveren/kint",
-        "version": "1.0.10",
-        "version_normalized": "1.0.10.0",
+        "name": "kint-php/kint",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/raveren/kint.git",
-            "reference": "c8423b9928bd35bf6ad14c688ab9c6d17d97d0eb"
+            "url": "https://github.com/kint-php/kint.git",
+            "reference": "5dea34eb550f0dd1ef582f3b785158c13f9c4fd4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/raveren/kint/zipball/c8423b9928bd35bf6ad14c688ab9c6d17d97d0eb",
-            "reference": "c8423b9928bd35bf6ad14c688ab9c6d17d97d0eb",
+            "url": "https://api.github.com/repos/kint-php/kint/zipball/5dea34eb550f0dd1ef582f3b785158c13f9c4fd4",
+            "reference": "5dea34eb550f0dd1ef582f3b785158c13f9c4fd4",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.1.0"
+            "php": ">=5.6"
         },
-        "time": "2015-09-16T14:09:00+00:00",
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.0",
+            "phpspec/prophecy-phpunit": "^2",
+            "phpunit/phpunit": "^9.0",
+            "seld/phar-utils": "^1.0",
+            "symfony/finder": "^3.0 || ^4.0 || ^5.0",
+            "vimeo/psalm": "dev-master"
+        },
+        "suggest": {
+            "ext-ctype": "Simple data type tests",
+            "ext-iconv": "Provides fallback detection for ambiguous legacy string encodings such as the Windows and ISO 8859 code pages",
+            "ext-mbstring": "Provides string encoding detection",
+            "kint-php/kint-js": "Provides a simplified dump to console.log()",
+            "kint-php/kint-twig": "Provides d() and s() functions in twig templates",
+            "symfony/polyfill-ctype": "Replacement for ext-ctype if missing",
+            "symfony/polyfill-iconv": "Replacement for ext-iconv if missing",
+            "symfony/polyfill-mbstring": "Replacement for ext-mbstring if missing"
+        },
+        "time": "2020-11-25T20:18:13+00:00",
         "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "files": [
-                "Kint.class.php"
-            ]
+                "init.php"
+            ],
+            "psr-4": {
+                "Kint\\": "src/"
+            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
@@ -36,21 +52,24 @@
         ],
         "authors": [
             {
+                "name": "Jonathan Vollebregt",
+                "homepage": "https://github.com/jnvsor"
+            },
+            {
                 "name": "Rokas Šleinius",
                 "homepage": "https://github.com/raveren"
             },
             {
                 "name": "Contributors",
-                "homepage": "https://github.com/raveren/kint/contributors"
+                "homepage": "https://github.com/kint-php/kint/graphs/contributors"
             }
         ],
-        "description": "Kint - debugging helper for PHP developers",
-        "homepage": "https://github.com/raveren/kint",
+        "description": "Kint - debugging tool for PHP developers",
+        "homepage": "https://kint-php.github.io/kint/",
         "keywords": [
             "debug",
             "kint",
             "php"
-        ],
-        "abandoned": "kint-php/kint"
+        ]
     }
 ]

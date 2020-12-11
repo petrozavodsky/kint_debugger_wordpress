@@ -65,25 +65,6 @@ class Kint_debugger_master
         $this->add_twicks();
     }
 
-    /**
-     *
-     * Remove default js_css kint
-     *
-     * - Composer autoload
-     *
-     * Create an instance of the loader which will be used to register the hooks
-     * with WordPress.
-     *
-     * @since    1.0.0
-     * @access   private
-     */
-    public function remove_style_and_js($code)
-    {
-        $code = preg_replace("'<script class=\"-kint-js\"*>.*</script>|<style class=\"-kint-css\"*>.*</style>'si", '', $code);
-//        $code = preg_replace("'<script[^>]*>.*</script>|<style[^>]*>.*</style>'si", '', $code);
-        $code = trim($code);
-        return $code;
-    }
 
     /**
      * Load the required dependencies for this plugin.
@@ -125,7 +106,6 @@ class Kint_debugger_master
      */
     private function add_hooks()
     {
-        add_filter('kint_debugger_master_raw_dump', array($this,'remove_style_and_js') ,10,1);
         add_filter('debug_bar_panels', array($this, 'add_kint_via_debug_bar'));
     }
     /**

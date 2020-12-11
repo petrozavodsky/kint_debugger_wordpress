@@ -21,10 +21,10 @@
     }
   ],
   "require": {
-    "php": ">=5.4.0"
+    "php": ">=5.4.0",
+    "kint-php/kint": "dev-master"
   },
   "require-dev": {
-    "raveren/kint": "1.0.10"
   },
   "autoload": {
     "classmap": [ ],
