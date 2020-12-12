@@ -8,11 +8,13 @@
 if ( ! function_exists( 'd' ) ) {
 	function d() {
 		global $kint_debug;
+
+		Kint::$aliases[] = 'd';
 		if ( ! Kint::$enabled_mode ) {
 			return '';
 		}
 		$_            = func_get_args();
-//		Kint::$display_called_from = false;
+
 		Kint::$return = true;
 		$dump         = call_user_func_array( [ 'Kint', 'dump' ], $_ );
 		$dump         = apply_filters( 'kint_debugger_master_raw_dump', $dump, 'd' );
@@ -22,65 +24,8 @@ if ( ! function_exists( 'd' ) ) {
 	}
 }
 
-/**
- * Alias of Kint::dump()
- * [!!!] IMPORTANT: execution will halt after call to this function
- *
- * @return string
- * @deprecated
- */
-if ( ! function_exists( 'dd' ) ) {
-	function dd() {
-		global $kint_debug;
-		if ( ! Kint::$enabled_mode ) {
-			return '';
-		}
-		echo "<pre>Kint: dd() is being deprecated, please use ddd() instead</pre>\n";
-		$_            = func_get_args();
-		Kint::$return = true;
-		$dump         = call_user_func_array( array( 'Kint', 'dump' ), $_ );
-		$dump         = apply_filters( 'kint_debugger_master_raw_dump', $dump, 'dd' );
-		$kint_debug[] = $dump;
-		echo $dump;
-		die;
-	}
-}
 
-/**
- * Alias of Kint::dump()
- * [!!!] IMPORTANT: execution will halt after call to this function
- *
- * @return string
- */
-if ( ! function_exists( 'ddd' ) ) {
-	function ddd() {
-		global $kint_debug;
-		if ( ! Kint::$enabled_mode ) {
-			return '';
-		}
-		$_            = func_get_args();
-		Kint::$return = true;
-		$dump         = call_user_func_array( array( 'Kint', 'dump' ), $_ );
-		$dump         = apply_filters( 'kint_debugger_master_raw_dump', $dump, 'ddd' );
-		$kint_debug[] = $dump;
-		echo $dump;
-		die;
-	}
-}
 
-/**
- * Alias of Kint::dump(), however the output is in plain htmlescaped text and some minor visibility enhancements
- * added. If run in CLI mode, output is pure whitespace.
- *
- * To force rendering mode without autodetecting anything:
- *
- *  Kint::enabled( Kint::MODE_PLAIN );
- *  Kint::dump( $variable );
- *
- * [!!!] IMPORTANT: execution will halt after call to this function
- *
- * @return string
- */
 if ( ! function_exists( 's' ) ) {
 	function s() {
 		global $kint_debug;
@@ -89,6 +34,7 @@ if ( ! function_exists( 's' ) ) {
 			return '';
 		}
 
+		Kint::$aliases[] = 's';
 		$stash = Kint::$enabled_mode;
 
 		if ( Kint::MODE_TEXT !== Kint::$enabled_mode ) {
@@ -125,7 +71,7 @@ if ( ! function_exists( 'sd' ) ) {
 		if ( ! $enabled ) {
 			return '';
 		}
-
+		Kint::$aliases[] = 'sd';
 		$stash = Kint::$enabled_mode;
 
 		if ( Kint::MODE_TEXT !== Kint::$enabled_mode ) {
