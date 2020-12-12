@@ -10,8 +10,8 @@
  * Plugin Name:       Kint Debugger Master
  * Plugin URI:        https://alkoweb.ru/kint_debugger_master
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
- * Requires PHP: 5.3
+ * Version:           1.1.0
+ * Requires PHP: 5.6
  * Author:            petrozavodsky
  * Author URI:        https://alkoweb.ru
  * License:           GPL-2.0+
@@ -33,7 +33,7 @@ require plugin_dir_path(__FILE__) . 'includes/class-kint_debugger_master.php';
 /**
  * Initialise the plugin.
  *
- * @since    1.0.0
+ * @since    1.1.0
  */
 function init_kint_debugger_master()
 {
