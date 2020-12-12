@@ -12,8 +12,9 @@ if ( ! function_exists( 'd' ) ) {
 			return '';
 		}
 		$_            = func_get_args();
+//		Kint::$display_called_from = false;
 		Kint::$return = true;
-		$dump         = call_user_func_array( array( 'Kint', 'dump' ), $_ );
+		$dump         = call_user_func_array( [ 'Kint', 'dump' ], $_ );
 		$dump         = apply_filters( 'kint_debugger_master_raw_dump', $dump, 'd' );
 		$kint_debug[] = $dump;
 
