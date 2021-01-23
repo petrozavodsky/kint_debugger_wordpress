@@ -1,7 +1,7 @@
 <?php
 
 /**
- * The file that defines the core plugin class
+ * Defines the core plugin class.
  *
  * @link       https://alkoweb.ru
  * @since      1.0.0
@@ -27,8 +27,8 @@ class Kint_debugger_master
      * @access   protected
      * @var      string $plugin_name The string used to uniquely identify this plugin.
      */
-
     protected $file;
+
     /**
      * The unique identifier of this plugin.
      *
@@ -65,13 +65,12 @@ class Kint_debugger_master
         $this->add_twicks();
     }
 
-
     /**
      * Load the required dependencies for this plugin.
      *
      * Include the following files that make up the plugin:
      *
-     * - Composer autoload
+     * - Composer autoloader
      *
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
@@ -81,13 +80,16 @@ class Kint_debugger_master
      */
     private function load_dependencies()
     {
-        require_once plugin_dir_path($this->file) . 'includes/kint_debug_functions.php';
-        require_once plugin_dir_path($this->file) . 'includes/wp_debug_functions.php';
-        require_once plugin_dir_path($this->file) . 'vendor/autoload.php';
+        $plugin_dir_path = plugin_dir_path($this->file);
+        require_once $plugin_dir_path . 'includes/kint_debug_functions.php';
+        require_once $plugin_dir_path . 'includes/wp_debug_functions.php';
+        require_once $plugin_dir_path . 'vendor/autoload.php';
     }
 
-    private function add_twicks(){
+    private function add_twicks()
+    {
         require_once plugin_dir_path($this->file) . 'includes/kint_debug_twick.php';
+
         new kint_debug_twick($this->file);
     }
 
@@ -120,7 +122,9 @@ class Kint_debugger_master
     public function add_kint_via_debug_bar($panels)
     {
         require_once plugin_dir_path($this->file) . 'includes/kint_debugger_master_debug_bar_panel.php';
+
         $panels[] = new kint_debugger_master_debug_bar_panel();
+
         return $panels;
     }
 
@@ -146,5 +150,4 @@ class Kint_debugger_master
     {
         return $this->version;
     }
-
 }
